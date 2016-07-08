@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0053)http://www.189.cn/jx/iframe/v2_head_search/index.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>189首页</title>
+<style>
+body,ul,ol,li,h1,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{padding: 0;margin: 0 auto;font-size:100%;font: normal normal normal;font-family: \5FAE\8F6F\96C5\9ED1,verdana;color: #777777;}
+ul,ol,li { list-style:none;}
+img{border:0px; }
+/*Link*/
+a {color:#777777}
+a:link {color: #777777;text-decoration: none;}/*未访问的链接 */
+a:visited {text-decoration: none;}/*已访问的链接*/
+a:hover{/*color:#FF6300;*/}/*鼠标移动到链接上*/
+a:active {text-decoration: none;color: #F00;}/*选定的链接*/
+a:focus {outline:none;-moz-outline:none;}/*链接虚线*/
+.fr{display: inline;float: right;}
+.mt15{margin-top: 15px;}
+.w550{width: 550px;}
+.fl{display: inline;float: left;}
+.middle .crk{ width:450px; height:32px; position:relative;}
+.middle .crk a{ cursor:pointer; float:left; display:block; font-family:"宋体"; font-size:12px; line-height:32px; text-align:center; color:#777777; width:80px; height:32px; background:#ffffff;}
+.middle .crk_yes{ background:#ff8201 !important; color:#ffffff !important;}
+.head_recommend{ display:block; float:left; margin-left:35px;}
+#lx_nav li { font-family:"微软雅黑"; float: left;width:80px; height: 32px; line-height: 32px; font-size: 12px; color: #fff;  cursor: pointer; text-align:center }
+#lx_nav .li01 { background-color: #ff8201; }
+#lx_nav .li02 { background-color: none;color: #777777}
+.mb5 {margin-bottom:5px;}
+.mt0 {margin-top: 0px;}
+.h32 {height:32px;}
+.w545 {width: 545px;}
+.bd2 {border: 2px solid #ff8200;}
+.input_boxs img { float: left; height: 32px; width: 32px;}
+.input_boxs a {background-color: #ff8200;color: White;display: block;float: right;font-size: 16px;height: 32px;line-height: 32px;text-align: center;width: 90px;}
+.lx-con li {margin-top:5px;}
+.input_boxs input {border: 0 none !important;color: #dddddd;float: left;font-size: 12px;height: 25px;line-height: 25px;outline: 0 none;width: 420px;}
+.pt2 {padding-top:2px}
+.a_link a { padding: 0 8px; color: #9b9b9b; text-decoration: none;}
+.vt img{vertical-align:text-top}
+.f12 {font-size: 0.75em;}
+.xl{ position:absolute; top:82px; width:456px;border:1px solid #FF8201; display:none;z-index: 333;background:#ffffff;left: 114px;}
+	  .xl li{ line-height:30px; cursor:pointer;color: #000; font-size:12px; text-indent:3em}
+	  .xl li:hover{ background:#F8F8F8;}
+</style>
+</head>
+<body>
+<span class="fr mt15" style="width:838px; height:104px;">
+<!--搜索-->
+    <div class="middle fl w550">
+        <form id="searchForm" target="_parent" name="selfWebSerForm" action="http://www.189.cn/search/keyword/10015" method="post">
+        <div class="crk">
+            <ul id="lx_nav">
+                <li class="li01" onclick="secBoard(&#39;lx_nav&#39;,&#39;vouch&#39;,&#39;li&#39;,1);">搜产品</li>
+                <li class="li02" onclick="secBoard(&#39;lx_nav&#39;,&#39;vouch&#39;,&#39;li&#39;,2);">搜帮助</li>
+            </ul>
+        </div>
+        <div class="input_boxs bd2 h32 w545 mb5 mt0"> <img src="ioc_01.gif">
+            <a style="float:left;background:none;height:25px!important;line-height:25px!important;">
+                <div class="lx-con" id="vouch_1" style="display: block;">
+                    <ul>		
+                        <li>
+                                                    <input id="searchtext" name="searchtext" type="text" value="无线上网卡" onfocus="if(this.value==&#39;无线上网卡&#39;)value=&#39;&#39;;" onkeydown="if (event.keyCode==13) {}" onblur="if(this.value==&#39;&#39;)value=&#39;无线上网卡&#39;;" maxlength="30" autocomplete="off" allowtransparency="true">
+							<!--<input id="searchtext" name="searchtext" type="text" value="无线上网卡" onfocus="if(this.value == '无线上网卡') this.value = ''" onblur="if(this.value =='') this.value = '无线上网卡'" />-->
+                        </li>
+                    </ul>
+                </div>
+                <div class="lx-con" id="vouch_2" style="display: none;">
+                    <ul>			
+                        <li>
+							<input id="wd" name="wd" type="text" value="">
+                		</li>
+                    </ul>
+                </div>    
+            </a>   
+            <a onclick="submitsearch();" href="javascript:;">搜索</a> 
+<ul id="serch_dialog" class="xl" style="display: none;"></ul>
+        </div>
+        </form>
+        <div class="a_link f12 vt pt2"> 
+            <!--<a href="#">三星<img src="/image/189cnv2/indexv2/img_head/hot.png" /></a> <a href="#">智能手机<img src="/image/189cnv2/indexv2/img_head/hot.png" /></a> <a href="#">悦Me</a> <a href="#">智能电视</a> <a href="#">上网卡</a> <a href="#">充值卡</a>--> 
+			<a href="http://shop.jx.189.cn/web/productDetail.action?productInfoID=6656" target="_blank">iPhone SE</a>
+			<a href="http://www.189.cn/products/S1981.html" target="_blank">主副卡</a>
+			<a href="http://www.189.cn/products/90336176367.html?intaid=jx-iad-index-serarch-d3&amp;cityCode=jiangxi" target="_blank"><strong><font color="red">大三元</font></strong></a><font color="red">
+			<a href="http://shop.jx.189.cn/web/productDetail.action?productInfoID=6651" target="_blank">红米note3</a>
+			<a href="http://shop.jx.189.cn/web/productDetail.action?productInfoID=6538" target="_blank">4G上网卡</a>
+			<a href="http://shop.jx.189.cn/web/productDetail.action?productInfoID=6437" target="_blank">荣耀5X</a>
+        </font></div><font color="red">
+    </font></div><font color="red">
+    <!--2015-->
+		<a href="http://jx.189.cn/res/active/lljyz/" target="_blank" class="head_recommend"><img src="ebba4858-75d6-4230-88fd-31357a6158b8.jpg" width="253" height="76"></a>
+            <!--<a href="#" target="_blank" class="head_recommend"><img src="/image/189cnv2/indexv2/img_head/head_recommend.jpg" width="253" height="76"/></a>-->
+</font></span><font color="red">
+
+<script type="text/javascript" src="jquery-1.8.3.js"></script>
+<script type="text/javascript" src="serchTip.js"></script>
+<script type="text/javascript">
+		$(function(){
+				$("#li01").click();
+				var shopId = getShopCar("SHOPID_COOKIEID") == "" ? "10015" : getShopCar("SHOPID_COOKIEID");
+				$("#shopId").val(shopId);
+        document.onkeydown=function(e){  
+					var currKey=0,e=e||event; currKey=e.keyCode||e.which||e.charCode;//支持IE、FF
+	        if(currKey==13){ // enter 键
+
+          		var searchurl = document.getElementById("searchForm").action;
+							if(searchurl.indexOf("keyword") != -1 ){
+              	var searchurl = "/search/keyword/10015/" + replacespace($("#searchtext").val())+"?internal_search=1";
+                $("#searchForm").attr("action",searchurl );
+              }
+	            document.getElementById('searchForm').submit();
+	        }
+	      };
+        flushZDQuery();
+        if(null!=window.parent.trk_searck_key && ""!=window.parent.trk_searck_key){
+                $("#searchtext").val(window.parent.trk_searck_key);
+        }
+		});
+
+    function flushZDQuery(){
+				var dataEvent = $("#iframesearchtext",parent.parent.document).attr("data-event");
+				var dataZhidao = $("#iframesearchtext",parent.parent.document).attr("data-zhidao");
+				if(dataZhidao != null && dataZhidao != "" && dataZhidao != "undefined"){
+					$(".li02").click();
+					$("#vouch_2 input[name='wd']").val(dataEvent);
+				}else{
+					//setTimeout(flushZDQuery(), 500);
+				}
+		}
+
+		function secBoard(elementID, listName, elementname, n) {
+        var elem = document.getElementById(elementID);
+        var elemlist = elem.getElementsByTagName(elementname);
+        for (var i = 0; i < elemlist.length; i++) {
+            elemlist[i].className = "li02";
+            var m = i + 1;
+            document.getElementById(listName + "_" + m).style.display = "none";
+        }
+        elemlist[n - 1].className = "li01";
+        document.getElementById(listName + "_" + n).style.display = "block";
+        var actionurl = "/search/keyword/10015/" + replacespace($("#searchtext").val())+"?internal_search=1";
+        
+				if(n==2){
+						$("#searchForm").attr("action","/dqmh/web/zhidao/searchforhall.jsp");
+				}else{
+						$("#searchForm").attr("action",actionurl );
+				}				
+    }
+
+		function getShopCar(name) {
+				var cookieString = document.cookie;
+				if (cookieString == "") {
+						return "";
+				} else {
+						var firstChar, lastChar;
+						firstChar = cookieString.indexOf(name);
+						if (firstChar != -1) {
+								firstChar += name.length + 1;
+								lastChar = cookieString.indexOf(";", firstChar);
+								if (lastChar == -1) {
+										lastChar = cookieString.length;
+								}
+								return cookieString.substring(firstChar, lastChar);
+						} else {
+								return "";
+						}
+				}
+		}
+
+		function submitsearch(){
+        var searchurl = document.getElementById("searchForm").action;
+
+				if(searchurl.indexOf("keyword") != -1 ){
+            var keyword = $("#searchtext").val();
+            var searchurl = "/search/keyword/10015/" + replacespace(keyword)+"?internal_search=1";
+
+        		$("#searchForm").attr("action",searchurl );
+        }
+        
+        document.getElementById("searchForm").submit();                								
+		}
+
+		function replacespace(str){
+
+        var regS = new RegExp("\\s+","g");
+        var nstr="";
+        if(str!=null && str!=undefined){
+             nstr = $.trim(str);
+             nstr = nstr.replace(regS,"+");
+        }
+        return nstr;
+    }
+
+</script>
+
+</font></body></html>

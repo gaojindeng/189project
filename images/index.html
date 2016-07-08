@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0039)http://www.189.cn/html/login/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>欢go官方网站</title>
+<style type="text/css">
+*{ margin:0; padding:0;}
+.login {
+    width: 500px;
+    font-size: 12px;
+    vertical-align: middle;
+    background-color: transparent;
+    line-height: 28px;
+    color: #7d8b8c;
+    font-family: \5FAE\8F6F\96C5\9ED1,verdana,serif;
+}
+.login span {
+    margin-left: 20px;
+}
+.login a {
+    text-decoration: none;
+    color: #7d8b8c;
+}
+#unLoginShow {
+    display: none;
+}
+#loginShow {
+    display: none;
+}
+</style>
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="jquery.cookie.js"></script>
+ <script type="text/javascript">
+	 function logout(){
+		 window.top.location.href = "/login/logout.do";
+		}
+	 function getUrlParam(name){
+		    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+		    var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+		    if (r!=null) return unescape(r[2]); return null; //返回参数值
+		}
+	 function setCookie(name,value)
+	 {
+	 var Days = 30;
+	 var exp = new Date();
+	 exp.setTime(exp.getTime() + Days*24*60*60*1000);
+	 document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString() + ";path=/;domain=.189.cn";
+	 }
+ </script>
+</head>
+ <body style="background-color:transparent;">
+   	<div class="login" id="unLoginShow" style="display: block;">
+        <span>欢迎来到欢go网站</span><span><a target="_top" id="loginJT" href="http://www.189.cn/login/index/ecs.do">登录</a>&nbsp;|&nbsp;<a id="userreg_link" href="http://login.189.cn/reg" target="_top">免费注册</a></span>
+    </div>
+    <div class="login" id="loginShow">
+        <input type="hidden" id="userType" value="">
+        <span id="nickName"></span><span><a href="javascript:void(0);" onclick="logout()">退出</a>
+        <a id="zjUserCenter" href="javascript:void(0)" style="display: none;" target="_top">|&nbsp;用户中心</a></span>
+    </div>
+
+<script type="text/javascript">
+    $(function(){
+    	var cityCode=$.cookie("cityCode"); 
+    	
+    	var cd_val = getUrlParam("cd");
+    	if(cd_val !=null ){
+    		//$.cookie('cityCode', cd_val,{expires: 30,path: '/' ,domain:'.189.cn'});
+    		setCookie("cityCode",cd_val);
+    		cityCode = cd_val;
+    	}
+        
+        $.ajax({
+            type:"GET",
+            url:"/login/index.do",
+            dataType:"json",
+            timeout : 1000,
+            success:function(data){
+                if(data.code==0 && data.dataObject.nickName != '' && data.dataObject.nickName != undefined){
+                    $("#userType").val(data.dataObject.userType);
+                    $("#nickName").text("您好，"+data.dataObject.nickName);
+                    $("#loginShow").show();
+                    if(cityCode == 'zj'){
+                    	$("#zjUserCenter").attr('href','/login/sso/ecs.do?platNo=10012&toStUrl=http://zj.189.cn/service/'); 
+    					$("#zjUserCenter").show();
+                    }
+                } else{
+                    $("#loginJT").attr("href",data.dataObject.loginUrl);
+                    $("#userreg_link").attr("href",data.dataObject.regUrl);
+                    $("#unLoginShow").show();
+                }
+            },
+            error:function(){
+                $("#unLoginShow").show();
+            }
+        });
+    });
+</script>
+</body></html>
